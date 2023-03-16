@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+@keyframes show {
+
+    0%{
+        scale: 0;
+        opacity: 0;
+    }
+
+    100%{
+        scale: 1;
+        opacity: 1;
+    }
+    
+}
+
+:root{
+    --moderate-blue: hsl(238, 40%, 52%);
+    --soft-red: hsl(358, 79%, 66%);
+    --light-grayish-blue: hsl(239, 57%, 85%);
+    --pale-red: hsl(357, 100%, 86%);
+    --dark-blue: hsl(212, 24%, 26%);
+    --grayish-blue: hsl(211, 10%, 45%);
+    --light-gray: hsl(223, 19%, 93%);
+    --very-light-gray: hsl(228, 33%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--very-light-gray);
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+    width: 1000px;
+}
+
+.username-time-reply-container{
+    display: flex;
+    align-items: center;
+    gap: 2em
+}
+
+.avatar-username-time-ago{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.avatar{
+    width: 50px;
+    height: 50px;
+}
+
+.time-ago{
+    opacity: 0.7;
+}
+
+.reply-btn{
+    display: flex;
+    gap: 0.5em;
+}
+
+button{
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.big-comment-container{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    background-color: var(--white);
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 8px 8px 24px 3px rgba(66, 68, 90, 1);
+}
+
+.comment{
+    margin-top: 1em;
+    opacity: 0.8;
+}
+
+.upvotes{
+    color: var(--moderate-blue);
+    font-weight: bold;
+}
+
+.username{
+    font-weight: bold;
+}
+
+.plus-and-minus-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    width: 50px;
+    align-items: center;
+    background-color: var(--light-gray);
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
+.vl{
+    background-color: var(--grayish-blue);
+    width: 6px;
+    opacity: 0.4;
+    margin-left: 2em;
+}
+
+.big-reply-container{
+    display: flex;
+    gap: 3em;
+}
+
+.reply-containers{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.reply, .editp{
+    color: var(--moderate-blue);
+    font-weight: bold;
+}
+
+.delete{
+    color: var(--soft-red);
+    font-weight: bold;
+}
+
+.delete-comment{
+    font-weight: bold;
+}
+
+.are-you-sure-text{
+    opacity: 0.8;
+    text-align: center;
+}
+
+.delete-btn{
+    display: flex;
+    gap: 0.5em;
+}
+
+.edit-btn{
+    display: flex;
+    gap: 0.5em;
+}
+
+.our-container{
+    display: flex;
+    gap: 1em;
+
+}
+
+.you{
+    background-color: var(--moderate-blue);
+    padding: 0.1em 0.3em;
+    color: var(--white);
+    font-size: 0.9em;
+}
+
+.user-comment-container{
+    display: flex;
+    background-color: var(--white);
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 8px 8px 24px 3px rgba(66, 68, 90, 1);
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1em;
+}
+
+.user-comment{
+    resize: none;
+    width: 100%;
+    height: 5em;
+    padding-top: 1em;
+    padding-left: 1em;
+    margin-left: 1em;
+}
+
+.user-first-comment{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.send{
+    text-transform: uppercase;
+    background-color: var(--moderate-blue);
+    color: var(--white);
+    padding: 1em 2em;
+    border-radius: 0.5em;
+}
+
+.edit{
+    text-transform: uppercase;
+    background-color: var(--moderate-blue);
+    color: var(--white);
+    padding: 1em 2em;
+    border-radius: 0.5em;
+}
+
+.plus{
+    display: flex;
+}
+
+.minus{
+    display: flex;
+}
+
+.icon:active{
+    width: 15px;
+}
+
+.attribution{
+    text-align: center;
+}
+
+.are-you-sure-container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: var(--very-light-gray);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.delete-btns{
+    display: flex;
+    gap: 1em;
+}
+
+.no, .yes{
+    text-transform: uppercase;
+    padding: 0.8em;
+    border-radius: 0.4em;
+    color: white;
+}
+
+.no{
+    background-color: var(--soft-red);
+}
+
+.yes{
+    background-color: var(--moderate-blue);
+}
+
+.green{
+    color: green;
+}
+
+.red{
+    color: red;
+}
+
+.new-input{
+    width: 100%;
+    padding-left: 1em;
+}
+
+.comment-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-cancel-container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+}
+
+.cancel{
+    text-transform: uppercase;
+    background-color: var(--soft-red);
+    color: var(--white);
+    padding: 1em 2em;
+    border-radius: 0.5em;
+}
+
+.filter{
+    filter: blur(4px);
+}
+
+.nice-animation{
+    animation: show 0.6s ease;
+}
+
+.hidden{
+    display: none;
+}
+
+.blue{
+    color: var(--moderate-blue);
+}
+
+@media (max-width: 700px){
+
+    .hero{
+        gap: 0.5em;
+    }
+
+    .vl{
+        display: none;
+    }
+
+    .big-comment-container{
+        flex-direction: column-reverse;
+        align-items: start;
+        padding: 0.5em;
+    }
+
+    .plus-and-minus-container{
+        flex-direction: row;
+        height: auto;
+        gap: 1em;
+        width: auto;
+    }
+    .username-time-reply-container{
+        justify-content: space-between;
+    }
+
+    .our-container{
+        flex-direction: column;
+    }
+
+    .reply-containers{
+        gap: 0.5em;
+    }
+
+    .user-comment-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .form{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .attribution{
+        margin-top: 2em;
+    }
+
+    .user-comment{
+        margin-left: 0em;
+    }
+
+}
